@@ -9,30 +9,10 @@
 
 <script type="text/javascript" charset="utf-8">
 
-//Esperamos que Cordova (PhoneGap) esté cargado
-
-
-document.addEventListener("deviceready", IniciarAplicacion, false);
 
 // IniciarAplicacion es la funcion que manejadora del evento deviceready
-var elemento = document.getElementById('propiedades');
-elemento.innerHTML = ' prueba';
-
-
-function IniciarAplicacion(){
-
-//la variable elemento guarda una referencia a un elemento
-
-//div donde se muestran las propiedades obtenidas con PhoneGap
-
-var elemento = document.getElementById('propiedades');
-
-//la variable informacion guarda todas las propiedades obtenidas con PhoneGap
-
-var informacion='Nombre del dispositivo';
-elemento.innerHTML = informacion;
-
-}
+var elemento = document.getElementById("propiedades");
+elemento.innerHTML = " prueba";
 
 </script>
 
@@ -40,11 +20,10 @@ elemento.innerHTML = informacion;
 
 <body>
 
-<!--Elemento div donde apareceran las propiedades del dipositivo obtenidas a travez de PhoneGap
-
--->
 
 <div id="propiedades">Cargando datos del dispositivo</div>
+
+<div id="propiedades2">Cargando datos del dispositivo</div>
 
 
 
