@@ -25,16 +25,8 @@ var elemento = document.getElementById('propiedades');
 
 //la variable informacion guarda todas las propiedades obtenidas con PhoneGap
 
-var informacion='Nombre del dispositivo ' + device.name + '<br />' + 
-
-'Version de Cordova: ' + device.cordova + '<br />' + 
-
-'Sistema operativo: ' + device.platform + '<br />' +
-
-'Version: ' + device.version + '<br />'+
-
-'Identificador unico universal: ' + device.uuid + '<br />';
-
+var informacion='Nombre del dispositivo ' + device.name + '<br />' + 'Version de Cordova: ' + device.cordova + '<br />' + 'Sistema operativo: ' + device.platform + '<br />' + 
+'Version: ' + device.version + '<br />'+ 'Identificador unico universal: ' + device.uuid + '<br />';
 elemento.innerHTML = informacion;
 
 }
