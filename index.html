@@ -18,7 +18,33 @@
     //
     function onDeviceReady() {
        alert("Dispositivo listo");
+       IniciarAplicacion();
     }
+    
+    function IniciarAplicacion(){
+        
+        //la variable elemento guarda una referencia a un elemento
+        
+        //div donde se muestran las propiedades obtenidas con PhoneGap
+        
+        var elemento = document.getElementById('propiedades');
+        
+        //la variable informacion guarda todas las propiedades obtenidas con PhoneGap
+        
+        var informacion='Nombre del dispositivo ' + device.name + '<br />' + 
+        
+        'Version de Cordova: ' + device.cordova + '<br />' + 
+        
+        'Sistema operativo: ' + device.platform + '<br />' +
+        
+        'Version: ' + device.version + '<br />'+
+        
+        'Identificador unico universal: ' + device.uuid + '<br />';
+        
+        elemento.innerHTML = informacion;
+
+    }
+
     </script>
 </head>
 <body onload="onLoad()">
@@ -33,5 +59,6 @@
             <h2><a href="http://blackbridge3rc.com/rutascln">rutasCln</a></h2>
         </div>
     </div>
+    <div id="propiedades">Cargando propiedades...</div>
 </body>
 </html>
