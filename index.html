@@ -2,18 +2,31 @@
 <html>
     <head>
     <title>Conociendo la API Device de PG</title>
-    <script type="text/javascript">
+    <script type="text/javascript" charset="utf-8">
     // IniciarAplicacion es la funcion que manejadora del evento deviceready
         function despliega(){
         var elemento = document.getElementById('propiedades');
         elemento.innerHTML = ' prueba';
         alert("hola");
         }
+        
+        function init(){
+        document.addEventListener("deviceready", IniciarAplicacion, false);
+        var elemento = document.getElementById('propiedades');
+        elemento.innerHTML = ' prueba';
+        alert("hola man");
+    	// IniciarAplicacion es la funcion que manejadora del evento deviceready
+
+			function IniciarAplicacion(){
+				var informacion="Tu SO es: " + device.platform + " Version: " + device.version;
+				alert(informacion);
+			}
+        }    
     </script>
 
     </head>
 
-    <body onload=despliega()>
+    <body onload=init()>
 
 
         <div id="propiedades">Cargando datos del dispositivo</div>
