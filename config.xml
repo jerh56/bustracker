@@ -20,5 +20,6 @@
     <preference name="android-targetSdkVersion" value="16" />
     <preference name="phonegap-version" value="3.3.0" />
     <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
 
 </widget>
