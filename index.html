@@ -1,46 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Conociendo la API Device de PG</title>
-     <script>
-        document.addEventListener("deviceready", deviceIsReady, false);
-
-        function deviceIsReady() {
-                app.checkConnection();
-        }
-     </script>
-    <script type="text/javascript" charset="utf-8">
-    // IniciarAplicacion es la funcion que manejadora del evento deviceready
-        function despliega(){
-        var elemento = document.getElementById('propiedades');
-        elemento.innerHTML = ' prueba';
-        alert("hola");
-        }
-        
-        function init(){
-        
-        var elemento = document.getElementById('propiedades');
-        var informacion="Tu SO es: " + device.platform + " Version: " + device.version;
-        elemento.innerHTML = ' prueba';
-        alert("hola man");
-        
-	alert(informacion);
-    	//
-        }    
-    </script>
-
-    </head>
-
-    <body onload=init()>
-
-
-        <div id="propiedades">Cargando datos del dispositivo</div>
-
-        <div id="propiedades2">Cargando datos del dispositivo</div>
-        <div id="propiedades3">Cargando datos del dispositivo</div>
-
-
-
-    </body>
-
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola mundo</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script charset="utf-8" src="bootstrap.min.js" type="text/javascript"></script>  
+    <script charset="utf-8" src="phonegap-3.3.0.js" type="text/javascript"></script> 
+</head>
+<body>
+    <div class="row text-center">
+        <div class="col-md-12 container">
+            <img src="logo.jpg" alt="logo" class="img-responsive">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 container">
+            <h1>Hola mundo</h1>
+            <h2><a href="http://www.nebaris.com">www.nebaris.com</a></h2>
+        </div>
+    </div>
+</body>
 </html>
