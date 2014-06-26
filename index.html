@@ -19,7 +19,30 @@
     function onDeviceReady() {
        alert("Dispositivo listo");
        IniciarAplicacion();
+          navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
+    
+      // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitud: '           + position.coords.latitude              + '<br />' +
+          'Longitud: '        + position.coords.longitude         + '\n' +
+          'Altitud: '         + position.coords.altitude          + '\n' +
+          'Precisión: '       + position.coords.accuracy          + '\n' +
+          'Precisión altitud' + position.coords.altitudeAccuracy  + '\n' +
+          'Dirección: '       + position.coords.heading           + '\n' +
+          'Velocidad: '       + position.coords.speed             + '\n' +
+          'Timestamp: '       + new Date(position.timestamp)      + '\n');
+    }
+
+    // La función 'callback' onError recibe un objeto `PositionError`.
+    //
+    function onError(error) {
+        alert('código: '    + error.code    + '\n' +
+              'mensaje: ' + error.message + '\n');
+    }
+       
     
     function IniciarAplicacion(){
         
@@ -32,6 +55,7 @@
         //   This method accepts a `Position` object, which contains
         //   the current GPS coordinates
         //
+        /*
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
             element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
@@ -44,8 +68,11 @@
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
-        }
+        }*/
         
+          
+
+   
         
                 
         var elemento = document.getElementById('propiedades');
@@ -65,7 +92,7 @@
         elemento.innerHTML = informacion;
         // Options: throw an error if no update is received every 30 seconds.
         //
-        var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+        //var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 
     }
     
