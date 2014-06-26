@@ -19,18 +19,14 @@
         }
         
         function init(){
-        document.addEventListener("deviceready", IniciarAplicacion, false);
+        
         var elemento = document.getElementById('propiedades');
+        var informacion="Tu SO es: " + device.platform + " Version: " + device.version;
         elemento.innerHTML = ' prueba';
         alert("hola man");
-        var informacion="Tu SO es: " + device.platform + " Version: " + device.version;
+        
 	alert(informacion);
-    	// IniciarAplicacion es la funcion que manejadora del evento deviceready
-
-			function IniciarAplicacion(){
-				var informacion="Tu SO es: " + device.platform + " Version: " + device.version;
-				alert(informacion);
-			}
+    	//
         }    
     </script>
 
